@@ -8,6 +8,7 @@ public class TestCar {
         Car fiat500 = new Car("car","gasoline",800, 24, 55,2);
         Car opelVivaro = new Car ("truck", "gasoline",2200,35,40,2);
         Car scaniaR450 = new Car ("xlTruck", "diesel", 14000,40,55,4);
+
         TestCar testFiat500 = new TestCar(new TestStrategy(new BrakesTestStrategy(new CarGasolineBrakeTest()),new EngineTestStrategy(new CarGasolineEngineTest()),new ChassisTestStrategy(new CarGasolineChassisTest())));
         testFiat500.testCar.test(fiat500);
 
