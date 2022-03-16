@@ -1,7 +1,7 @@
 public interface BrakeTestType {
     String test (int brakes);
 }
- class CarGasolineBrakeTest implements BrakeTestType{
+ class CarBrakeTest implements BrakeTestType{
     String testResult;
     public String test(int brakes){
         if (brakes > 25){
@@ -13,7 +13,7 @@ public interface BrakeTestType {
         return testResult;
     }
 }
-class TruckGasolineBrakeTest implements BrakeTestType{
+class TruckBrakeTest implements BrakeTestType{
     String testResult;
     public  String test (int brakes){
         if (brakes>30){
@@ -25,7 +25,7 @@ class TruckGasolineBrakeTest implements BrakeTestType{
         return testResult;
     }
 }
-class XlTruckDiselBrakeTest implements BrakeTestType{
+class XlTruckBrakeTest implements BrakeTestType{
     String testResult;
     public  String test (int brakes){
         if (brakes>35){

@@ -38,3 +38,15 @@ class XlTruckDieselEngineTest implements EngineTestType{
         return testResult;
     }
 }
+class TruckElectricEngineTest implements EngineTestType{
+    String testResult;
+    public String test (float emission){
+        if (emission == 0){
+            testResult = "Electric Truck emission test ok";
+        }else{
+            testResult ="Electric Truck emission test failed";
+        }
+        System.out.println(testResult);
+        return testResult;
+    }
+}

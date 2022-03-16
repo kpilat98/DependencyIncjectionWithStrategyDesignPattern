@@ -1,7 +1,7 @@
 public interface ChassisTestType {
     String test (int axleNumber, int mass);
 }
-class CarGasolineChassisTest implements ChassisTestType {
+class CarChassisTest implements ChassisTestType {
     String testResult;
     public String test(int axleNumber, int mass) {
         if (mass / axleNumber < 500) {
@@ -13,7 +13,7 @@ class CarGasolineChassisTest implements ChassisTestType {
         return testResult;
     }
 }
-    class TruckGasolineChassisTest implements ChassisTestType {
+    class TruckChassisTest implements ChassisTestType {
         String testResult;
         public String test(int axleNumber, int mass) {
             if (mass/axleNumber < 1200) {
@@ -25,7 +25,20 @@ class CarGasolineChassisTest implements ChassisTestType {
             return testResult;
         }
     }
-class XlTruckDieselChassisTest implements ChassisTestType{
+    class TruckElectricChassisTest implements ChassisTestType{
+        String testResult;
+        public String test(int axleNumber, int mass) {
+            if (mass/axleNumber < 1400) {
+                testResult = "Electric truck Chassis test ok ";
+            } else {
+                testResult = "Electric truck Chassis test failed";
+            }
+            System.out.println(testResult);
+            return testResult;
+        }
+    }
+
+class XlTruckChassisTest implements ChassisTestType{
     String testResult;
     public String test(int axleNumber, int mass) {
         if (mass/axleNumber < 2000) {
